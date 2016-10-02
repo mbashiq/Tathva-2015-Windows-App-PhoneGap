@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+   <head>
+      <title></title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      
+     <style>
+          html, body{
+              height: 100%;
+              width: 100%;
+              background: #fff;
+          }
+      </style>
+      
+
+      <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+
+      <script type="text/javascript">
+      window.plugins.orientationLock.lock("portrait");
+         
+         function GetMap()
+         {
+            // Initialize the map
+            var map = new Microsoft.Maps.Map(document.getElementById("mapDiv"), {credentials:"AjtUzWJBHlI3Ma_Ke6Qv2fGRXEs0ua5hUQi54ECwfXTiWsitll4AkETZDihjcfeI"}); 
+
+            // Create the locations
+            var location1 = new Microsoft.Maps.Location(20,-20);
+            var location2 = new Microsoft.Maps.Location(20,20);
+            var location3 = new Microsoft.Maps.Location(-20,20);
+            var location4 = new Microsoft.Maps.Location(-20,-20);
+            var location5 = new Microsoft.Maps.Location(10,-10);
+            var location6 = new Microsoft.Maps.Location(10,10);
+            var location7 = new Microsoft.Maps.Location(-10,10);
+            var location8 = new Microsoft.Maps.Location(-10,-10);
+            
+
+            // Create a polygon 
+            var vertices = new Array(location1, location2, location3, location4, location1);
+            var polygoncolor = new Microsoft.Maps.Color(100,100,0,100);
+            var polygon = new Microsoft.Maps.Polygon(vertices,{fillColor: polygoncolor, strokeColor: polygoncolor});
+
+            // Create the entity collection with the polygon and pushpins at each corner
+            var polygonWithPins = new Microsoft.Maps.EntityCollection();
+            polygonWithPins.push(polygon);
+            polygonWithPins.push(new Microsoft.Maps.Pushpin(location1));
+            polygonWithPins.push(new Microsoft.Maps.Pushpin(location2));
+            polygonWithPins.push(new Microsoft.Maps.Pushpin(location3));
+            polygonWithPins.push(new Microsoft.Maps.Pushpin(location4));
+            polygonWithPins.push(new Microsoft.Maps.Pushpin(location5));
+            polygonWithPins.push(new Microsoft.Maps.Pushpin(location6));
+            polygonWithPins.push(new Microsoft.Maps.Pushpin(location7));
+            polygonWithPins.push(new Microsoft.Maps.Pushpin(location8));
+            
+
+            // Add the shape to the map
+            map.entities.push(polygonWithPins)
+
+         }
+
+      </script>
+     
+   </head>
+   <body onload="GetMap();">
+   	 <a href="index.html"><div id="rb" style="background: url('close1.png') no-repeat right; background-size: cover;height: 95px;width: 95px;top: 40px; right: 14px;position: absolute; z-index: 999;"></div></a>
+   	 
+   	 
+      <div id='mapDiv' style="position:relative; width:100%; height:100%;z-index: 998;"></div>       
+   </body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Forms</title>
+<meta name="msapplication-tap-highlight" content="no" /> 
+
+<meta name="viewport" content="width=device-width"></meta>
+<script src="jquery.min.js" type="text/javascript"></script>
+<script src="qrcode.min.js" type="text/javascript"></script>
+ 
+<style>
+    html, body{
+        height: 100%;
+        width: 100%;
+        color: #fff;
+        overflow: hidden;
+        background-color: #000;
+    }
+	*{
+		font-family: Avenir;
+        background-color: transparent;
+	}
+	#head{
+		position: relative;
+		font-size: 25px;
+        height: 40px;
+        line-height: 40px;
+        margin-top: 20px;
+        margin-left: 20px;
+        padding-bottom: 20px;
+	}
+	#subhead{
+		position: relative;
+		height: 100%;
+		width: 100%;
+        margin-left: 20px;
+        font-weight: lighter;
+        height: 30px;
+        margin-top: -20px;
+	}
+	#frm{
+		width: 240px;
+		position: absolute;
+		padding-top: 40px;
+		left: 50%;
+		margin-left: -120px;
+		color: white;
+        font-family: 'Avenir', sans-serif;
+		font-weight: 100;
+	}
+    .butt{
+		background: none;
+		width: 200px;
+		height: 40px;
+		border: 1px solid white;
+		border-radius: 5px;
+		position: absolute;
+		bottom: 30px;
+        left: 50%;
+        margin-left: -100px;
+		font-size: 18px;
+        text-align: center;
+		line-height: 40px;
+	}
+	.butt1{
+		background: none;
+		width: 200px;
+		height: 40px;
+		border: 1px solid white;
+		border-radius: 5px;
+		position: absolute;
+		bottom: 80px;
+	    left: 50%;
+	    margin-left: -100px;
+		font-size: 18px;
+	    text-align: center;
+		line-height: 40px;
+	}
+	li{
+		list-style-type: none;
+	}
+	.input{
+		position: relative;
+		top: 13px;
+		color: white;
+		padding: 10px 0px;
+		font-size: 18px;
+		border: none;
+		border-bottom: 1px solid white;
+        border-radius: 0;
+		outline: none;
+        font-family: 'Avenir', sans-serif;
+		background: none;
+        width: 240px;
+	}
+    #qrcode{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 50%;
+        border: 10px solid #fff;
+        margin-top: 30px;
+        visibility: hidden;
+    }
+</style>
+<script  type="text/javascript">
+    var flag=0;
+    
+	function submit(){
+		var obj=[
+			document.getElementById("id").value,
+			document.getElementById("phone").value,
+		]
+        if (!document.getElementById("id").value || !document.getElementById("phone").value) {
+            alert("Input a text");
+            return;
+        }
+        
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+                width : window.innerWidth-50,
+                height : window.innerWidth-50,
+                colorDark : "#000000",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.L
+        });
+
+        document.getElementById("qrcode").style.height = (window.innerWidth-50) + "px";
+        document.getElementById("qrcode").style.width = (window.innerWidth-50) + "px";
+
+        document.getElementById("frm").style.visibility = "hidden";
+        document.getElementById("qrcode").style.marginLeft = "-"+ ((window.innerWidth-30)/2) +"px";
+        
+        if(flag==0){
+            qrcode.makeCode( JSON.stringify(obj) );
+            document.getElementById("frm").style.visibility = "hidden";
+            document.getElementById("qrcode").style.visibility = "visible";
+            document.getElementById("submit").innerHTML = "Edit Details";
+            flag=1;
+        }
+        else{
+            document.getElementById("frm").style.visibility = "visible";
+            document.getElementById("qrcode").style.visibility = "hidden";
+            document.getElementById("submit").innerHTML = "View QR Code";
+            flag=0;
+        }
+	}
+</script>
+</head>
+ <body>
+ 	<a href="index.html"><div id="rb" style="background: url('close.png') no-repeat right; background-size: cover;height: 35px;width: 35px;top: 40px; right: 14px;position: absolute; z-index: 999;"></div></a>
+	<div id="head"> Registration Entry </div>
+	
+    <div id="subhead"> Edit details to register </div>
+	<div id="frm">
+		<li><input class="input" type="text" id="id" name="email" placeholder="Tathva ID" /></li>
+		<li><input class="input" type="tel" id="phone" name="Name" placeholder="Phone Number" /></li>
+	</div>
+    <div id="qrcode"></div>
+    <div class="butt1" id="submit" onclick="location.href='https://webqr.com'">Scan QR Code</div>
+    
+    <div class="butt" id="submit" onclick="submit()">View QR Code</div>
+</body>
+</html>

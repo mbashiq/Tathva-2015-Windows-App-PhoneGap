@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Front</title>
+<meta name="msapplication-tap-highlight" content="no" />
+
+<meta name="viewport" content="width=device-width"></meta>
+<meta name="viewport" content="height=device-height"></meta>
+<script src="rebound.min.js" type="text/javascript"></script>
+<script src="jquery.min.js" type="text/javascript"></script>
+<script src="qrcode.min.js" type="text/javascript"></script>
+
+<style>
+    html, body{
+        width: 100%;
+        color: red;
+        background: #fff;
+        overflow: hidden;
+    }
+
+    @-moz-keyframes spin {
+        from { -moz-transform: rotateY(0deg); }
+        to { -moz-transform: rotateY(360deg); }
+    }
+    @-webkit-keyframes spin {
+        from { -webkit-transform: rotateY(0deg); }
+        to { -webkit-transform: rotateY(360deg); }
+    }
+    @keyframes spin {
+        from {transform:rotateY(0deg);}
+        to {transform:rotateY(360deg);}
+    }
+	*{
+		font-family: Avenir;
+		-ms-user-select: none;
+	}
+	#head{
+		position: relative;
+		text-align: center;
+		font-size: 30px;
+		width: 100%;
+		margin-left: -5px;
+        height: 12px;
+        font-family: Avenir;
+        font-weight: 900;
+        line-height: 50px;
+        margin-top: 10px;
+        padding-bottom: 20px;
+	}
+	#lb{
+		position: relative;
+		margin: 0px auto;
+	}
+	#subhead{
+		position: relative;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+        font-weight: lighter;
+        height: 30px;
+        margin-top: -20px;
+	}
+	#circle1{
+		width: 110px;
+		position: absolute;
+		height: 110px;
+		color: white;
+		top: 110px;
+		font-weight: 100;
+		background-color: red;
+		border-radius: 50%;
+		line-height: 110px;
+		text-align: center;
+	}
+	#circle1o5{
+		width: 90px;
+		position: absolute;
+		height: 90px;
+		color: white;
+		font-weight: 100;
+		top: 90px;
+		left: 115px;
+		background-color: red;
+		border-radius: 50%;
+		line-height: 90px;
+		text-align: center;
+	}
+	#circle2{
+		width: 90px;
+		position: absolute;
+		height: 90px;
+		color: white;
+		font-weight: 100;
+		top: 130px;
+		left: 210px;
+		background-color: red;
+		border-radius: 50%;
+		line-height: 90px;
+		text-align: center;
+	}
+	#circle3{
+		width: 175px;
+		position: absolute;
+		height: 175px;
+		color: white;
+		font-weight: 100;
+		top: 195px;
+		left: 70px;
+		background-color: red;
+		border-radius: 50%;
+		line-height: 175px;
+		text-align: center;
+
+
+
+	}
+
+	#circle3tr{
+
+			height: 110px;
+			width: 110px;
+			margin: 25px;
+
+		    background: #f00;
+		    -webkit-animation-name: spin;
+		    -webkit-animation-duration: 4000ms;
+		    -webkit-animation-iteration-count: infinite;
+		    -webkit-animation-timing-function: linear;
+		    -moz-animation-name: spin;
+		    -moz-animation-duration: 4000ms;
+		    -moz-animation-iteration-count: infinite;
+		    -moz-animation-timing-function: linear;
+		    -ms-animation-name: spin;
+		    -ms-animation-duration: 4000ms;
+		    -ms-animation-iteration-count: infinite;
+		    -ms-animation-timing-function: linear;
+		    -o-transition: rotate(3600deg);
+
+	}
+	#circle4{
+		width: 110px;
+		position: absolute;
+		height: 110px;
+		color: white;
+		font-weight: 100;
+		top: 350px;
+		left: 200px;
+		background-color: red;
+		border-radius: 50%;
+		line-height: 110px;
+		text-align: center;
+	}
+	#circle5{
+		width: 133px;
+		position: absolute;
+		height: 133px;
+		color: white;
+		font-weight: 100;
+		top: 390px;
+		left: 60px;
+		background-color: red;
+		border-radius: 50%;
+		line-height: 133px;
+		text-align: center;
+	}
+	#circle6{
+		width: 78px;
+		position: absolute;
+		height: 78px;
+		color: white;
+		font-weight: 100;
+		top: 330px;
+		left: 10px;
+		background-color: red;
+		border-radius: 50%;
+		line-height: 78px;
+		text-align: center;
+	}
+
+    .butt{
+		background: none;
+		width: 200px;
+		height: 40px;
+		border: 1px solid white;
+		border-radius: 5px;
+		position: absolute;
+		bottom: 30px;
+        left: 50%;
+        margin-left: -100px;
+		font-size: 18px;
+        text-align: center;
+		line-height: 40px;
+	}
+	#wrapper{
+		position: relative;
+		margin: 0px auto;
+		margin-top: -70px;
+		transform-origin: 0px 0px;
+
+	}
+</style>
+<script  type="text/javascript">
+
+window.plugins.orientationLock.lock("portrait");
+
+</script>
+</head>
+ <body>
+ <div>
+ 	<div id="lb" style="background: url('prof.png') no-repeat left; background-size: cover;float: left;height: 35px;width: 35px;margin-top: -10px;z-index: 999;" onclick="location.href='reg.html'"></div>
+	<div id="head" style="background: url('tathva.png') no-repeat center; background-size: contain;"></div>
+	<div id="rb" style="background: url('location.png') no-repeat right; background-size: cover;float: right;height: 35px;width: 35px;margin-top: -42px; margin-right: 14px;z-index: 999;position: relative;" onclick="location.href='bar.html'"></div>
+ </div>
+    <div id="subhead"> </div>
+    <div style="height: 550px; width:320px;" id="wrapper">
+	<div id="circle1" onclick="location.href='nites.html'">Workshops</div>
+	<div id="circle1o5" onclick="location.href='http://ajcl.comxa.com/clueless-15/'">Clueless</div>
+	<div id="circle2"  onclick="location.href='about.html'">About</div>
+	<div id="circle3"><div id="circle3tr" style="background: url('man.png') no-repeat center; background-size: contain;"></div></div>
+	<div id="circle4" onclick="location.href='nites.html'">Nites</div>
+	<div id="circle5" onclick="location.href='list.html'">Events</div>
+	<div id="circle6" onclick="location.href='lectures.html'">Lectures</div>
+	</div>
+
+
+
+</body>
+
+</html>

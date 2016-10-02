@@ -1,0 +1,395 @@
+
+{
+        "locations" : [
+                [
+                    "AUDITORIUM",
+                    "11.322373",
+                    "75.935716",
+                    "OTHER SPOTS"
+                ],
+                [
+                    "ARYABHATTA",
+                    "11.320719",
+                    "75.933917",
+                    "LECTURE HALLS"
+                ],
+                [
+                    "VB COURT",
+                    "11.320611",
+                    "75.933788",
+                    "GROUNDS"
+                ],
+                [
+                    "MAIN BUILDING",
+                    "11.321489",
+                    "75.934123",
+                    "OTHER SPOTS"
+                ],
+                [
+                    "MECHANICAL LAB",
+                    "11.321573",
+                    "75.936025",
+                    "LABS"
+                ],
+                [
+                    "OFFSHORE LAB",
+                    "11.323146",
+                    "75.935941",
+                    "LABS"
+                ],
+                [
+                    "FOOTBALL GROUND",
+                    "11.321437",
+                    "75.932468",
+                    "GROUNDS"
+                ],
+                [
+                    "NLHC",
+                    "11.321597",
+                    "75.933176",
+                    "LECTURE HALLS"
+                ],
+                [
+                    "ELECTRICAL LAB",
+                    "11.322962",
+                    "75.935276",
+                    "LABS"
+                ],
+                [
+                    "ELECTRONICS LAB",
+                    "11.322762",
+                    "75.935053",
+                    "LABS"
+                ],
+                [
+                    "CIVIL SEMINAR HALL",
+                    "11.323054",
+                    "75.935518",
+                    "LECTURE HALLS"
+                ],
+                [
+                    "HOCKEY GROUND",
+                    "11.321568",
+                    "75.932752",
+                    "GROUNDS"
+                ],
+                [
+                    "NSL",
+                    "11.322757",
+                    "75.9343",
+                    "LABS"
+                ],
+                [
+                    "EC SEMINAR HALL",
+                    "11.322286",
+                    "75.934281",
+                    "LECTURE HALLS"
+                ],
+                [
+                    "CHANAKYA",
+                    "11.320787",
+                    "75.9342",
+                    "LECTURE HALLS"
+                ],
+                [
+                    "PG BLOCK",
+                    "11.321702",
+                    "75.934992",
+                    "PG BLOCKS"
+                ],
+                [
+                    "TENNIS COURT",
+                    "11.320374",
+                    "75.933643",
+                    "GROUNDS"
+                ],
+                [
+                    "CHEMICAL BLOCK",
+                    "11.323094",
+                    "75.93731",
+                    "DEPARTMENT BUILDINGS"
+                ],
+                [
+                    "DB",
+                    "11.321915",
+                    "75.935043",
+                    "DEPARTMENT BUILDINGS"
+                ],
+                [
+                    "BHASKARA",
+                    "11.320937",
+                    "75.934043",
+                    "LECTURE HALLS"
+                ],
+                [
+                    "CCC",
+                    "11.321673",
+                    "75.933852",
+                    "OTHER SPOTS"
+                ],
+                [
+                    "ARCHI BLOCK",
+                    "11.322786",
+                    "75.936725",
+                    "DEPARTMENT BUILDINGS"
+                ],
+                [
+                    "ELHC",
+                    "11.322332",
+                    "75.933814",
+                    "LECTURE HALLS"
+                ],
+                [
+                    "MAIN CANTEEN",
+                    "11.319961",
+                    "75.932055",
+                    "CANTEENS"
+                ],
+                [
+                    "A HOSTEL",
+                    "11.320758",
+                    "75.934973",
+                    "HOSTELS"
+                ],
+                [
+                    "ADMINISTRATIVE BLOCK",
+                    "11.3207",
+                    "75.933007",
+                    "OTHER SPOTS"
+                ],
+                [
+                    "B HOSTEL",
+                    "11.320406",
+                    "75.935998",
+                    "HOSTELS"
+                ],
+                [
+                    "BASKET BALL COURT",
+                    "11.321205",
+                    "75.933616",
+                    "GROUNDS"
+                ],
+                [
+                    "C HOSTEL",
+                    "11.320337",
+                    "75.936799",
+                    "HOSTELS"
+                ],
+                [
+                    "CAD CAM LAB",
+                    "11.321716",
+                    "75.936003",
+                    "LABS"
+                ],
+                [
+                    "CENTRAL LIBRARY",
+                    "11.321889",
+                    "75.934782",
+                    "OTHER SPOTS"
+                ],
+                [
+                    "D HOSTEL",
+                    "11.320143",
+                    "75.937733",
+                    "HOSTELS"
+                ],
+                [
+                    "E HOSTEL",
+                    "11.319669",
+                    "75.938508",
+                    "HOSTELS"
+                ],
+                [
+                    "ELECTRONICS PG BLOCK",
+                    "11.322715",
+                    "75.935874",
+                    "PG BLOCKS"
+                ],
+                [
+                    "F HOSTEL",
+                    "11.320627",
+                    "75.937441",
+                    "HOSTELS"
+                ],
+                [
+                    "ELECTRICAL PG BLOCK",
+                    "11.323004",
+                    "75.935469",
+                    "PG BLOCKS"
+                ],
+                [
+                    "FLUID LABORATORY",
+                    "11.320958",
+                    "75.93581",
+                    "LABS"
+                ],
+                [
+                    "G HOSTEL",
+                    "11.321263",
+                    "75.936837",
+                    "HOSTELS"
+                ],
+                [
+                    "MATHEMATICS DEPARTMENT",
+                    "11.323294",
+                    "75.937754",
+                    "DEPARTMENT BUILDINGS"
+                ],
+                [
+                    "MINI CANTEEN",
+                    "11.320577",
+                    "75.936644",
+                    "CANTEENS"
+                ],
+                [
+                    "ACADEMIC BLOCK",
+                    "11.32039",
+                    "75.932487",
+                    "OTHER SPOTS"
+                ],
+                [
+                    "OPEN AIR THEATRE",
+                    "11.322034",
+                    "75.933428",
+                    "OTHER SPOTS"
+                ],
+                [
+                    "PG1 HOSTEL",
+                    "11.320159",
+                    "75.934836",
+                    "HOSTELS"
+                ],
+                [
+                    "PG2 HOSTEL",
+                    "11.320011",
+                    "75.93615",
+                    "HOSTELS"
+                ],
+                [
+                    "PHYSICS DEPARTMENT",
+                    "11.323309",
+                    "75.937746",
+                    "DEPARTMENT BUILDINGS"
+                ],
+                [
+                    "GEOTECHNOLOGY LAB",
+                    "11.322249",
+                    "75.935343",
+                    "LABS"
+                ],
+                [
+                    "PRODUCTION BLOCK",
+                    "11.322107",
+                    "75.935582",
+                    "DEPARTMENT BUILDINGS"
+                ],
+                [
+                    "RECHARGE CENTRE",
+                    "11.321913",
+                    "75.934866",
+                    "OTHER SPOTS"
+                ],
+                [
+                    "SCHOOL OF NANO TECHNOLOGY",
+                    "11.322128",
+                    "75.936027",
+                    "DEPARTMENT BUILDINGS"
+                ],
+                [
+                    "SM LAB",
+                    "11.322381",
+                    "75.935646",
+                    "LABS"
+                ],
+                [
+                    "SYSTEM SOFTWARE LAB",
+                    "11.322628",
+                    "75.934243",
+                    "LABS"
+                ],
+                [
+                    "FACULTY BUILDING",
+                    "11.315514",
+                    "75.935192",
+                    "HOSTELS"
+                ],
+                [
+                    "TRAINING AND PLACEMENT CELL",
+                    "11.321153",
+                    "75.935134",
+                    "OTHER SPOTS"
+                ],
+                [
+                    "DEPARTMENT OF BIOTECHNOLOGY",
+                    "11.323094",
+                    "75.93731",
+                    "DEPARTMENT BUILDINGS"
+                ],
+                [
+                    "LADIES HOSTEL",
+                    "11.317941",
+                    "75.931068",
+                    "HOSTELS"
+                ],
+                [
+                    "MEGA HOSTEL",
+                    "11.318062",
+                    "75.93577",
+                    "HOSTELS"
+                ],
+                [
+                    "CS DEPARTMENT",
+                    "11.322207",
+                    "75.934023",
+                    "DEPARTMENT BUILDINGS"
+                ],
+                [
+                    "EC DEPARTMENT",
+                    "11.322294",
+                    "75.934294",
+                    "DEPARTMENT BUILDINGS"
+                ],
+                [
+                    "CIVIL DEPARTMENT",
+                    "11.322302",
+                    "75.934892",
+                    "DEPARTMENT BUILDINGS"
+                ],
+                [
+                    "MECHANICAL DEPARTMENT",
+                    "11.321973",
+                    "75.935067",
+                    "DEPARTMENT BUILDINGS"
+                ],
+                [
+                    "EEE DEPARTMENT",
+                    "11.322478",
+                    "75.934509",
+                    "DEPARTMENT BUILDINGS"
+                ],
+                [
+                    "SBI BANK & ATM",
+                    "11.319727",
+                    "75.929933",
+                    "ATMS"
+                ],
+                [
+                    "SBI ATM",
+                    "11.319761",
+                    "75.932366",
+                    "ATMS"
+                ],
+                [
+                    "PNB ATM",
+                    "11.318686",
+                    "75.933457",
+                    "ATMS"
+                ],
+                [
+                    "SBI ATM IN CAMPUS",
+                    "11.321011",
+                    "75.934732",
+                    "ATMS"
+                ]
+        ]
+}

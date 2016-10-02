@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+    <head>
+        <style>
+        body{
+
+            color: #fff;
+            overflow-x: hidden;
+            background: #000;
+            padding: 20px ;      }
+      *{
+        font-family: Avenir;
+        font-size: 60px;
+        -ms-user-select: none;
+      }
+      h1{
+          font-weight: 500;
+          font-size: 100px;
+      }
+
+                #wrapper{
+                	padding-top: 20px;
+                	margin-top: 40px;
+                	position: relative;
+
+                	}
+        </style>
+        <script src="data.js" type="text/javascript"></script>
+        <script src="jquery.js" type="text/javascript"></script>
+        <script type="text/javascript">
+
+
+        	$(document).ready(function () {
+
+        		var str = window.location.href;
+
+            var parameter1 = (str.split("#")[1].split(",")[0].replace("%20", " "));
+            var parameter2 = Number(str.split("#")[1].split(",")[1]);
+
+             var datum = data[parameter1][parameter2]["Content"];
+             $("#wrapper").html(datum);
+
+             document.getElementById("link").href = "subevents.html#"+parameter1;
+            });
+
+        </script>
+    </head>
+    <body>
+      <a id="link" href="subevents.html"><div id="rb" style="background: url('close.png') no-repeat right; background-size: cover;height: 100px;width: 100px;top: 40px; right: 14px;position: absolute; z-index: 999;"></div></a>
+
+       <div id="wrapper">
+
+       </div>
+    </body>
+</html>

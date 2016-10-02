@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tathva</title>
+
+<meta name="msapplication-tap-highlight" content="no" />
+<meta name="viewport" content="width=device-width"></meta>
+<script src="rebound.min.js" type="text/javascript"></script>
+<script src="jquery.min.js" type="text/javascript"></script>
+<script src="qrcode.min.js" type="text/javascript"></script>
+
+<style>
+    html, body{
+        height: 100%;
+        width: 100%;
+        color: #000;
+        overflow-x: hidden;
+        background: #fff;
+    }
+	*{
+		font-family: Avenir;
+		-ms-user-select: none;
+	}
+	#head{
+		width: 100%;
+		position: absolute;
+		text-align: center;
+		font-size: 25px;
+        height: 40px;
+        line-height: 50px;
+        margin-top: 5px;
+		margin-left: -20px;
+		}
+	#subhead{
+		position: relative;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+        font-weight: lighter;
+        height: 30px;
+        margin-top: -20px;
+	}
+	.circle{
+		width: 100px;
+		position: absolute;
+		height: 100px;
+		color: white;
+		font-weight: 100;
+		background-color: red;
+		border-radius: 50%;
+		text-align: center;
+	}
+    .butt{
+		background: none;
+		width: 200px;
+		height: 40px;
+		border: 1px solid white;
+		border-radius: 5px;
+		position: absolute;
+		bottom: 30px;
+        left: 50%;
+        margin-left: -100px;
+		font-size: 18px;
+        text-align: center;
+		line-height: 40px;
+	}
+	#wrapper{
+		padding-top: 20px;
+		margin-top: 40px;
+
+		transform-origin: 0px 0px;
+	}
+</style>
+<script  type="text/javascript">
+var objects = [
+        { "size": 160, "left": 125, "top": 0, "text": "Young Engineer", "delay": 0 },
+        { "size": 80, "left": 40, "top": 0, "text": "Electrical", "delay": 0.5 },
+        { "size": 120, "left": 10, "top": 90, "text": "Robotics", "delay": 0.3 },
+        { "size": 80, "left": 145, "top": 170, "text": "Chemical", "delay": 0.6 },
+        { "size": 120, "left": 185, "top": 245, "text": "Adizya", "delay": 0.4 },
+
+        { "size": 80, "left": 230, "top": 155, "text": "Blitzkrieg", "delay": 0.5 },
+        { "size": 160, "left": 10, "top": 220, "text": "Computer Science", "delay": 0.2 },
+        { "size": 160, "left": 100, "top": 365, "text": "Online Events", "delay": 0 },
+        { "size": 80, "left": 10, "top": 385, "text": "Quizzing", "delay": 0.5 },
+        { "size": 80, "left": 140, "top": 625, "text": "Mechanical", "delay": 0.3 },
+
+        { "size": 80, "left": 230, "top": 495, "text": "Civil", "delay": 0.5 },
+        { "size": 80, "left": 135, "top": 535, "text": "General", "delay": 0.5 },
+        { "size": 120, "left": 10, "top": 490, "text": "Physics", "delay": 0.5 },
+        { "size": 80, "left": 220, "top": 580, "text": "Electronics", "delay": 0.3 },
+        { "size": 80, "left": 220, "top": 670, "text": "Bizspark", "delay": 0.2 },
+
+        { "size": 120, "left": 105, "top": 710, "text": "Workshops", "delay": 0.2 },
+        { "size": 120, "left": 10, "top": 620, "text": "Blueprint", "delay": 0.2 },
+    ];
+		var views = [];
+		var currentlyAnimating;
+
+
+   		window.onload=function() {
+
+
+
+   			var scaleVal = window.innerWidth/320;
+   			document.getElementById("wrapper").style.transform = "scale("+scaleVal+")";
+
+   			$("#back").click(function(){
+   				window.location.href='index.html';
+   			});
+
+
+   			for(var i=0; i<objects.length; ++i){
+
+   				var elem = document.createElement("div");
+   				elem.setAttribute("class", "circle");
+   				elem.setAttribute("id", i);
+
+   				elem.style.height = objects[i]["size"]+"px";
+   				elem.style.width = objects[i]["size"]+"px";
+
+   				elem.style.top = objects[i]["top"]+"px";
+   				elem.style.left = objects[i]["left"]+"px";
+
+   				elem.style.borderRadius = objects[i]["size"]/2 + "px";
+   				elem.style.lineHeight = objects[i]["size"] + "px";
+
+   				elem.innerHTML = objects[i]["text"];
+ 				elem.style.background = "red";
+   				views.push(elem);
+   				document.getElementById("wrapper").appendChild(elem);
+
+   				$(elem).click(function () {
+   					window.location.href = 'subevents.html#' + this.innerHTML;
+   				});
+
+
+   			var el = elem;
+
+   			// create a SpringSystem and a Spring with a bouncy config.
+   			var springSystem = new rebound.SpringSystem();
+   			var spring = springSystem.createSpring(50, 3);
+
+   			// Add a listener to the spring. Every time the physics
+   			// solver updates the Spring's value onSpringUpdate will
+   			// be called.
+   			spring.addListener({
+   			  onSpringUpdate: function(spring) {
+   			    var val = spring.getCurrentValue();
+   			    val = rebound.MathUtil.mapValueInRange(val, 0, 1, 1, 0.5);
+   			    scale(views[currentlyAnimating], val);
+   			  }
+   			});
+
+   			// Listen for mouse down/up/out and toggle the
+   			//springs endValue from 0 to 1.
+   			el.addEventListener('mousedown', function() {
+   				currentlyAnimating = this.id;
+   			  	spring.setEndValue(1);
+   			});
+
+   			el.addEventListener('mouseout', function() {
+   				currentlyAnimating = this.id;
+   			  	spring.setEndValue(0);
+   			});
+
+   			el.addEventListener('mouseup', function() {
+   				currentlyAnimating = this.id;
+   			  	spring.setEndValue(0);
+   			});
+
+   		}
+
+   			// Helper for scaling an element with css transforms.
+   			function scale(el, val) {
+   			  el.style.mozTransform =
+   			  el.style.msTransform =
+   			  el.style.webkitTransform =
+   			  el.style.transform = 'scale3d(' +
+   			    val + ', ' + val + ', 1)';
+   			}
+
+   		}
+
+
+</script>
+</head>
+ <body>
+ <div>
+ 	<div style="background: url('close1.png') no-repeat left; background-size: cover;float: left;height: 40px;width: 40px;margin-top: 0px;z-index: 999;position: relative;margin: 5px;" id="back"></div>
+ 	<div id="head" style="margin-left:-50px;z-index: 998;position: relative;">Tathva</div>
+ </div>
+
+    <div id="subhead"> </div>
+    <div style="height: 900px; width:320px;" id="wrapper">
+
+
+	</div>
+
+</body>
+
+</html>
